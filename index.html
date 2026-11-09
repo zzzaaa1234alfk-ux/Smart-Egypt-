@@ -1,60 +1,120 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMART EGYPT - LIFE GUARD</title>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#00D4FF">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00d4ff">
+  <meta name="description" content="SMART EGYPT - LIFE GUARD: مدينتك الذكية وحارس حياتك">
+  <title>SMART EGYPT - LIFE GUARD</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button id="installBtn" style="display:none; background:#FACC15; color:black; padding:12px 25px; border:none; border-radius:15px; font-weight:bold; margin:10px;">⬇️ ثبّت التطبيق على موبايلك</button>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-icon">S</span>
+    <span>SMART <b>EGYPT</b><small>LIFE GUARD</small></span>
+  </a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
 
-<div class="header">
-<h1>SMART <span>EGYPT</span></h1>
-<p>مدينتك الذكية - وحارس حياتك</p>
-</div>
+<nav class="nav-links" id="navLinks">
+  <a href="index.html">الرئيسية</a>
+  <a href="ai.html">المساعد الذكي</a>
+  <a href="guard.html">الحماية</a>
+  <a href="health.html">الصحة</a>
+  <a href="edu.html">التعليم</a>
+  <a href="agri.html">الزراعة</a>
+  <a href="city.html">المدينة</a>
+</nav>
 
-<div class="guard-card">
-<h2>🚨 LIFE GUARD</h2>
-<p>نظام الإنقاذ والطوارئ</p>
-<button class="sos-btn" onclick="sendSOS()">SOS - طوارئ</button>
-<br><br>
-<a href="guard.html"><button>افتح صفحة الطوارئ</button></a>
-</div>
+<main class="container">
+  <section class="hero">
+    <div class="hero-content">
+      <span class="tag">مستقبل مصر يبدأ الآن</span>
+      <h1>حياتك أذكى<br><span>مع SMART EGYPT</span></h1>
+      <p>منصة ذكية تجمع التكنولوجيا والخدمات والمعلومات في مكان واحد لخدمة حياتك اليومية.</p>
+      <a class="main-btn" href="#services">اكتشف خدماتنا ←</a>
+    </div>
+    <div class="hero-art">
+      <div class="orbit">✦</div>
+      <div class="big-logo">S</div>
+      <div class="orbit orbit-two">✧</div>
+    </div>
+  </section>
 
-<div class="grid">
-<a href="ai.html"><div class="card">🤖 المساعد الذكي<br><small>بيفهم صعيدي</small></div></a>
-<a href="city.html"><div class="card">🏙️ المدينة الذكية<br><small>بلاغات مغاغة</small></div></a>
-<a href="edu.html"><div class="card">📚 التعليم الذكي<br><small>تالتة ثانوي</small></div></a>
-<a href="health.html"><div class="card">💊 الصحة الذكية</div></a>
-<a href="agri.html"><div class="card">🌾 الزراعة الذكية</div></a>
-<a href="guard.html"><div class="card">🚑 بنك الدم</div></a>
-</div>
+  <section class="stats">
+    <div class="stat"><strong>7</strong><span>أقسام رئيسية</span></div>
+    <div class="stat"><strong>24/7</strong><span>متاح دائماً</span></div>
+    <div class="stat"><strong>100%</strong><span>واجهة عربية</span></div>
+  </section>
+
+  <section id="services">
+    <div class="section-heading">
+      <span class="tag">اكتشف المنصة</span>
+      <h2>خدماتنا الذكية</h2>
+      <p>اختر القسم الذي تحتاجه</p>
+    </div>
+
+    <div class="service-grid">
+      <a class="service-card" href="ai.html">
+        <span class="service-icon">🤖</span>
+        <h3>المساعد الذكي</h3>
+        <p>مساعد تجريبي للإجابة عن أسئلتك.</p>
+        <span class="card-link">افتح القسم ←</span>
+      </a>
+
+      <a class="service-card" href="guard.html">
+        <span class="service-icon">🛡️</span>
+        <h3>الحماية والأمان</h3>
+        <p>تعلم حماية حساباتك وبياناتك.</p>
+        <span class="card-link">افتح القسم ←</span>
+      </a>
+
+      <a class="service-card" href="health.html">
+        <span class="service-icon">❤️</span>
+        <h3>الصحة الذكية</h3>
+        <p>معلومات صحية وإرشادات عامة.</p>
+        <span class="card-link">افتح القسم ←</span>
+      </a>
+
+      <a class="service-card" href="edu.html">
+        <span class="service-icon">📚</span>
+        <h3>التعليم الذكي</h3>
+        <p>تعلم واكتشف مصادر المعرفة.</p>
+        <span class="card-link">افتح القسم ←</span>
+      </a>
+
+      <a class="service-card" href="agri.html">
+        <span class="service-icon">🌱</span>
+        <h3>الزراعة الذكية</h3>
+        <p>معلومات ونصائح زراعية.</p>
+        <span class="card-link">افتح القسم ←</span>
+      </a>
+
+      <a class="service-card" href="city.html">
+        <span class="service-icon">🏙️</span>
+        <h3>المدينة الذكية</h3>
+        <p>خدمات وأفكار لتحسين المدن.</p>
+        <span class="card-link">افتح القسم ←</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="info-panel">
+    <span class="service-icon">🇪🇬</span>
+    <h2>مصر المستقبل</h2>
+    <p>نستخدم التكنولوجيا لتسهيل الحياة ونشر المعرفة وبناء مجتمع أكثر ذكاءً.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="brand footer-brand">SMART <b>EGYPT</b></div>
+  <p>SMART EGYPT - LIFE GUARD</p>
+  <p>© 2026 جميع الحقوق محفوظة</p>
+</footer>
 
 <script src="app.js"></script>
-<script>
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('sw.js');
-}
-let deferredPrompt;
-window.addEventListener('beforeinstallprompt', function(e){
-  e.preventDefault();
-  deferredPrompt = e;
-  document.getElementById('installBtn').style.display = 'block';
-});
-document.getElementById('installBtn').addEventListener('click', function(){
-  if(deferredPrompt){
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then(function(choice){
-      if(choice.outcome === 'accepted'){
-        alert('تم التثبيت يا بوب! هتلاقي التطبيق على الشاشة');
-      }
-      deferredPrompt = null;
-    });
-  }
-});
-</script>
 </body>
 </html>
