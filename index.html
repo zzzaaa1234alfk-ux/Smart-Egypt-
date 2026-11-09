@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMART EGYPT - LIFE GUARD</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00D4FF">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="installBtn" style="display:none; background:#FACC15; color:black; padding:12px 25px; border:none; border-radius:15px; font-weight:bold; margin:10px;">⬇️ ثبّت التطبيق على موبايلك</button>
+
+<div class="header">
+<h1>SMART <span>EGYPT</span></h1>
+<p>مدينتك الذكية - وحارس حياتك</p>
+</div>
+
+<div class="guard-card">
+<h2>🚨 LIFE GUARD</h2>
+<p>نظام الإنقاذ والطوارئ</p>
+<button class="sos-btn" onclick="sendSOS()">SOS - طوارئ</button>
+<br><br>
+<a href="guard.html"><button>افتح صفحة الطوارئ</button></a>
+</div>
+
+<div class="grid">
+<a href="ai.html"><div class="card">🤖 المساعد الذكي<br><small>بيفهم صعيدي</small></div></a>
+<a href="city.html"><div class="card">🏙️ المدينة الذكية<br><small>بلاغات مغاغة</small></div></a>
+<a href="edu.html"><div class="card">📚 التعليم الذكي<br><small>تالتة ثانوي</small></div></a>
+<a href="health.html"><div class="card">💊 الصحة الذكية</div></a>
+<a href="agri.html"><div class="card">🌾 الزراعة الذكية</div></a>
+<a href="guard.html"><div class="card">🚑 بنك الدم</div></a>
+</div>
+
+<script src="app.js"></script>
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js');
+}
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', function(e){
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('installBtn').style.display = 'block';
+});
+document.getElementById('installBtn').addEventListener('click', function(){
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(function(choice){
+      if(choice.outcome === 'accepted'){
+        alert('تم التثبيت يا بوب! هتلاقي التطبيق على الشاشة');
+      }
+      deferredPrompt = null;
+    });
+  }
+});
+</script>
+</body>
+</html>
