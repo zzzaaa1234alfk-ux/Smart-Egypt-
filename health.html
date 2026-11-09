@@ -1,18 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الصحة</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#00d4ff">
+<title>الصحة الذكية - SMART EGYPT</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
 <body>
-<h1>💊 الصحة الذكية</h1>
-<div class="box">
-<h3>اعرف دواك</h3>
-<input placeholder="اكتب اسم الدوا">
-<button onclick="alert('الدوا ده للصداع والسخونية، بديله الرخيص: باراسيتامول')">اعرف الدوا</button>
-</div>
-<div class="box">
-<h3>اقرب دكتور في مغاغة</h3>
-<p>دكتور باطنة - دكتور اطفال - دكتور عظام</p>
-</div>
-<a href="index.html"><button>رجوع</button></a>
+<header class="topbar"><a class="brand" href="index.html">SMART <b>EGYPT</b></a><button class="menu-btn" onclick="toggleMenu()">☰</button></header>
+<nav class="nav-links" id="navLinks">
+<a href="index.html">الرئيسية</a><a href="ai.html">المساعد الذكي</a><a href="guard.html">الحماية</a><a href="health.html">الصحة</a><a href="edu.html">التعليم</a><a href="agri.html">الزراعة</a><a href="city.html">المدينة</a>
+</nav>
+<main class="container">
+<section class="page-header"><span class="tag">SMART HEALTH</span><h1>❤️ الصحة الذكية</h1><p>معلومات عامة تساعدك على الاهتمام بصحتك.</p></section>
+<section class="content-panel">
+<h2>نصائح يومية</h2>
+<ul>
+<li>حافظ على مواعيد نوم منتظمة.</li>
+<li>تناول وجبات متنوعة ومتوازنة.</li>
+<li>اشرب الماء بانتظام.</li>
+<li>مارس نشاطاً بدنياً مناسباً لعمرك وقدرتك.</li>
+<li>اهتم بالنظافة الشخصية.</li>
+<li>استشر الطبيب عند وجود مشكلة صحية.</li>
+</ul>
+</section>
+<section class="content-panel">
+<h2>التوعية الصحية</h2>
+<p>الصحة الجيدة تعتمد على العادات اليومية والوقاية والمتابعة الطبية عند الحاجة.</p>
+<p>المعلومات هنا للتوعية العامة فقط ولا تقدم تشخيصاً أو علاجاً أو بديلاً عن الطبيب.</p>
+</section>
+</main>
+<footer>SMART EGYPT - LIFE GUARD</footer>
 <script src="app.js"></script>
 </body>
 </html>
