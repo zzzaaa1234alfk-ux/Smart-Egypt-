@@ -1,20 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>التعليم</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#00d4ff">
+<title>التعليم الذكي - SMART EGYPT</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
 <body>
-<h1>📚 التعليم الذكي</h1>
-<div class="box">
-<h3>امتحان سريع - تالتة ثانوي</h3>
-<p>س: عاصمة مصر؟</p>
-<button onclick="checkQuiz()">القاهرة</button>
-<button onclick="alert('غلط، حاول تاني')">اسكندرية</button>
-<button onclick="alert('غلط، حاول تاني')">المنيا</button>
-</div>
-<div class="box">
-<h3>المواد</h3>
-<p>عربي - انجليزي - فيزياء - كيمياء - احياء - رياضة</p>
-</div>
-<a href="index.html"><button>رجوع</button></a>
+<header class="topbar"><a class="brand" href="index.html">SMART <b>EGYPT</b></a><button class="menu-btn" onclick="toggleMenu()">☰</button></header>
+<nav class="nav-links" id="navLinks">
+<a href="index.html">الرئيسية</a><a href="ai.html">المساعد الذكي</a><a href="guard.html">الحماية</a><a href="health.html">الصحة</a><a href="edu.html">التعليم</a><a href="agri.html">الزراعة</a><a href="city.html">المدينة</a>
+</nav>
+<main class="container">
+<section class="page-header"><span class="tag">SMART EDUCATION</span><h1>📚 التعليم الذكي</h1><p>مساحة للتعلم وتنظيم المذاكرة واكتساب المهارات.</p></section>
+<section class="content-panel">
+<h2>منظم الملاحظات الدراسية</h2>
+<p>اكتب ملاحظاتك واحفظها على جهازك.</p>
+<textarea class="field" id="noteText" rows="6" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+<button class="action-btn" onclick="saveNote()">حفظ الملاحظات</button>
+<div class="result" id="noteResult">الملاحظات محفوظة محلياً على جهازك عند الضغط على الحفظ.</div>
+</section>
+<section class="content-panel">
+<h2>مهارات تستحق التعلم</h2>
+<ul>
+<li>البرمجة وتطوير المواقع.</li>
+<li>اللغة الإنجليزية.</li>
+<li>التفكير النقدي وحل المشكلات.</li>
+<li>الرياضيات والعلوم.</li>
+<li>الأمن الرقمي والذكاء الاصطناعي.</li>
+</ul>
+</section>
+</main>
+<footer>SMART EGYPT - LIFE GUARD</footer>
 <script src="app.js"></script>
 </body>
 </html>
