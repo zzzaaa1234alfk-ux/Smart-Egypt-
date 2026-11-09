@@ -1,17 +1,21 @@
+
 {
   "name": "SMART EGYPT - LIFE GUARD",
   "short_name": "SMART EGYPT",
-  "description": "مدينتك الذكية - وحارس حياتك",
-  "start_url": "index.html",
+  "description": "مدينتك الذكية - حارس حياتك",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#0A0A0A",
-  "theme_color": "#00D4FF",
   "orientation": "portrait",
+  "background_color": "#070b14",
+  "theme_color": "#00d4ff",
+  "lang": "ar",
+  "dir": "rtl",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "./logo.jpg",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any"
     }
   ]
