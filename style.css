@@ -1,0 +1,11 @@
+body{background:#0A0A0A;color:white;font-family:Cairo, sans-serif;text-align:center;margin:0;padding:15px}
+a{text-decoration:none;color:white}
+.header h1{font-size:32px;margin-bottom:5px}
+.header span{color:#00D4FF}
+.guard-card{background:#1A0000;border:2px solid #FF0000;padding:20px;border-radius:20px;margin:15px 0}
+.sos-btn{background:#FF0000;color:white;border:none;padding:15px 40px;font-size:22px;border-radius:50px;font-weight:bold;cursor:pointer}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}
+.card{background:#151515;padding:20px;border-radius:15px;border:1px solid #222}
+.box{background:#151515;padding:15px;border-radius:15px;margin-top:15px;text-align:right}
+input,select{width:90%;padding:10px;border-radius:10px;border:none;margin:5px;font-family:inherit}
+button{padding:10px 15px;background:#00D4FF;border:none;border-radius:10px;margin-top:10px;font-weight:bold;cursor:pointer}
