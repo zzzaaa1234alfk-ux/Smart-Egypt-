@@ -1,15 +1,42 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>المساعد الذكي</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#00d4ff">
+<title>المساعد الذكي - SMART EGYPT</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
 <body>
+<header class="topbar">
+<a class="brand" href="index.html">SMART <b>EGYPT</b></a>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+<nav class="nav-links" id="navLinks">
+<a href="index.html">الرئيسية</a><a href="ai.html">المساعد الذكي</a>
+<a href="guard.html">الحماية</a><a href="health.html">الصحة</a>
+<a href="edu.html">التعليم</a><a href="agri.html">الزراعة</a>
+<a href="city.html">المدينة</a>
+</nav>
+<main class="container">
+<section class="page-header">
+<span class="tag">SMART AI</span>
 <h1>🤖 المساعد الذكي</h1>
-<p>بيفهم صعيدي</p>
-<div class="box">
-<div id="chat"><p><b>المساعد:</b> ازيك يا بوب، عامل ايه دلوك؟</p></div>
-<input id="msg" placeholder="اكتب بالصعيدي... مثلا: ازيك دلوك">
-<button onclick="askAI()">ابعت</button>
+<p>مساعد تجريبي يعمل محلياً دون اتصال بالإنترنت.</p>
+</section>
+<section class="content-panel">
+<h2>ابدأ المحادثة</h2>
+<div class="chat-box" id="chatBox">
+<div class="chat-msg bot">المساعد: أهلاً بك! اسألني عن التعليم أو الصحة أو الزراعة أو التكنولوجيا.</div>
 </div>
-<a href="index.html"><button>رجوع</button></a>
+<input class="field" id="question" placeholder="اكتب سؤالك هنا..." onkeydown="if(event.key==='Enter')smartReply()">
+<button class="action-btn" onclick="smartReply()">إرسال الرسالة</button>
+<p style="margin-top:12px">تنبيه: هذه نسخة تجريبية بقواعد ردود محدودة وليست نموذج ذكاء اصطناعي متصلاً بالإنترنت.</p>
+</section>
+</main>
+<footer>SMART EGYPT - LIFE GUARD</footer>
 <script src="app.js"></script>
 </body>
 </html>
