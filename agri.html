@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#00d4ff">
-<title>الحماية والأمان - SMART EGYPT</title>
+<title>الزراعة الذكية - SMART EGYPT</title>
 <link rel="stylesheet" href="style.css">
 <link rel="manifest" href="manifest.json">
 </head>
@@ -15,24 +15,27 @@
 <a href="index.html">الرئيسية</a><a href="ai.html">المساعد الذكي</a><a href="guard.html">الحماية</a><a href="health.html">الصحة</a><a href="edu.html">التعليم</a><a href="agri.html">الزراعة</a><a href="city.html">المدينة</a>
 </nav>
 <main class="container">
-<section class="page-header"><span class="tag">DIGITAL SECURITY</span><h1>🛡️ الحماية والأمان</h1><p>تعلم كيف تحمي حساباتك وبياناتك الرقمية.</p></section>
+<section class="page-header"><span class="tag">SMART AGRICULTURE</span><h1>🌱 الزراعة الذكية</h1><p>التكنولوجيا لخدمة الزراعة وترشيد الموارد.</p></section>
 <section class="content-panel">
-<h2>فحص قوة كلمة المرور</h2>
-<p>أدخل كلمة مرور تجريبية فقط. لا تكتب كلمة مرورك الحقيقية.</p>
-<input class="field" id="passwordCheck" type="text" placeholder="كلمة مرور تجريبية">
-<button class="action-btn" onclick="checkPassword()">افحص القوة</button>
-<div class="result" id="passwordResult">نتيجة الفحص ستظهر هنا.</div>
+<h2>حاسبة توزيع المياه</h2>
+<p>أدخل مساحة الأرض وكمية المياه المستخدمة لحساب المتوسط لكل متر مربع.</p>
+<label for="area">مساحة الأرض بالمتر المربع</label>
+<input class="field" id="area" type="number" min="0.01" step="any" placeholder="مثال: 100">
+<label for="waterAmount">كمية المياه باللتر</label>
+<input class="field" id="waterAmount" type="number" min="0" step="any" placeholder="مثال: 500">
+<button class="action-btn" onclick="calculateWater()">احسب المتوسط</button>
+<div class="result" id="waterResult">النتيجة ستظهر هنا.</div>
 </section>
 <section class="content-panel">
-<h2>نصائح للحماية الرقمية</h2>
+<h2>أفكار للزراعة الذكية</h2>
 <ul>
-<li>استخدم كلمة مرور طويلة ومختلفة لكل حساب.</li>
-<li>فعّل المصادقة الثنائية.</li>
-<li>لا تفتح الروابط مجهولة المصدر.</li>
-<li>لا تشارك رمز التحقق مع أي شخص.</li>
-<li>حدّث هاتفك وتطبيقاتك باستمرار.</li>
-<li>استخدم المواقع الرسمية عند إدخال بياناتك.</li>
+<li>استخدام أنظمة الري بالتنقيط.</li>
+<li>مراقبة رطوبة التربة.</li>
+<li>متابعة حالة المحاصيل باستمرار.</li>
+<li>تقليل هدر المياه.</li>
+<li>الاستفادة من الطاقة الشمسية عند ملاءمتها.</li>
 </ul>
+<p>اختيار المحصول ومواعيد الري والأسمدة يحتاج إلى معلومات عن التربة والمناخ واستشارة مختص.</p>
 </section>
 </main>
 <footer>SMART EGYPT - LIFE GUARD</footer>
