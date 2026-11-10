@@ -1,42 +1,24 @@
-
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#00d4ff">
-<title>المساعد الذكي - SMART EGYPT</title>
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
-</head>
-<body>
-<header class="topbar">
-<a class="brand" href="index.html">SMART <b>EGYPT</b></a>
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-</header>
-<nav class="nav-links" id="navLinks">
-<a href="index.html">الرئيسية</a><a href="ai.html">المساعد الذكي</a>
-<a href="guard.html">الحماية</a><a href="health.html">الصحة</a>
-<a href="edu.html">التعليم</a><a href="agri.html">الزراعة</a>
-<a href="city.html">المدينة</a>
-</nav>
-<main class="container">
-<section class="page-header">
-<span class="tag">SMART AI</span>
-<h1>🤖 المساعد الذكي</h1>
-<p>مساعد تجريبي يعمل محلياً دون اتصال بالإنترنت.</p>
-</section>
-<section class="content-panel">
-<h2>ابدأ المحادثة</h2>
-<div class="chat-box" id="chatBox">
-<div class="chat-msg bot">المساعد: أهلاً بك! اسألني عن التعليم أو الصحة أو الزراعة أو التكنولوجيا.</div>
-</div>
-<input class="field" id="question" placeholder="اكتب سؤالك هنا..." onkeydown="if(event.key==='Enter')smartReply()">
-<button class="action-btn" onclick="smartReply()">إرسال الرسالة</button>
-<p style="margin-top:12px">تنبيه: هذه نسخة تجريبية بقواعد ردود محدودة وليست نموذج ذكاء اصطناعي متصلاً بالإنترنت.</p>
-</section>
-</main>
-<footer>SMART EGYPT - LIFE GUARD</footer>
-<script src="app.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>المساعد الذكي</title>
+<style>*{box-sizing:border-box;font-family:system-ui}body{margin:0;background:#f0f6ff}header{background:#0b6cff;color:#fff;padding:14px;text-align:center}header a{color:#fff}
+#chat{height:70vh;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:85%;padding:10px 12px;border-radius:14px}.me{background:#0b6cff;color:#fff;align-self:flex-start}.ai{background:#fff;align-self:flex-end;border:1px solid #ddd}
+.row{display:flex;gap:8px;padding:10px;background:#fff}input{flex:1;padding:12px;border-radius:30px;border:1px solid #ddd}button{background:#0b6cff;color:#fff;border:0;padding:0 18px;border-radius:30px;font-weight:800}
+</style></head><body>
+<header><a href="index.html">⬅ رجوع</a><br><b>المساعد الذكي - متصل 🟢</b></header>
+<div id="chat"></div>
+<div class="row"><input id="q" placeholder="اكتب سؤالك..."><button onclick="send()">ابعت</button></div>
+<script>
+const chat=document.getElementById('chat');
+function add(t,c){let d=document.createElement('div');d.className='msg '+c;d.innerText=t;chat.appendChild(d);chat.scrollTop=chat.scrollHeight}
+function reply(q){q=q.toLowerCase();
+if(q.includes('صح'))return 'عشان صحتك: اشرب مياه كتير، نام 7 ساعات، امشي نص ساعة كل يوم، وقلل سكر وملح.';
+if(q.includes('تعليم')||q.includes('مذاكرة'))return 'ذاكر 25 دقيقة وريح 5، واكتب اللي فهمته بإيدك. قولي في سنة كام؟';
+if(q.includes('زراع'))return 'اسقي الصبح بدري، وسمد التربة. قولي بتزرع ايه وانا اقولك تعمل ايه.';
+if(q.includes('نصب')||q.includes('حماي'))return 'اوعى تبعت كود لحد، ولا تدوس على لينك غريب. لو حد قال انا من البنك اقفل وكلم البنك بنفسك.';
+if(q.includes('شغل')||q.includes('فلوس'))return 'اتعلم مهارة زي التصميم او البيع اونلاين. قولي بتعرف تعمل ايه؟';
+if(q.includes('نكت'))return 'واحد راح للدكتور قاله كل ما اشرب قهوة عيني بتوجعني، قاله شيل المعلقة 😂';
+return 'فهمتك، وضحلي اكتر؟ عايز تعرف عن الصحة ولا التعليم ولا الزراعة ولا الشغل؟';}
+function send(){let i=document.getElementById('q');if(!i.value.trim())return;add(i.value,'me');let q=i.value;i.value='';setTimeout(()=>add(reply(q),'ai'),500)}
+document.getElementById('q').addEventListener('keydown',e=>{if(e.key==='Enter')send()});
+add('اهلا بيك! انا مساعدك الذكي، بتكلم مصري زيك. اسألني عن اي حاجة.','ai');
+</script></body></html>
